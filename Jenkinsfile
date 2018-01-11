@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Inspect Template') {
       steps {
-        build job: 'cfn-template-inspector', parameters: [
+        build job: 'devsecops-pipeline', parameters: [
           string(name: 'workspaceDir', value: "${env.WORKSPACE}"),
           string(name: 'templateFilename', value: 'stack.yaml')
         ]
